@@ -1,12 +1,58 @@
-# Experimental Code for the Ren-L&uuml; Vari-linear Network Generation Model
+# Experimental Code for the Ren-L&uuml; (RL) Vari-linear Network Generation Model
 
 
 
-The code necessary to reproduce the main figures and statistical analyses in the research on Ren-L&uuml; (RL) vari-linear network generation model.
+The code necessary to reproduce the main figures and statistical analyses in the research on Ren-L&uuml; vari-linear network generation model.
 
 
 
-## Code Directory
+## Core Code: ren_l&uuml;_graph.py
+
+**ren_l&uuml;_graph(n, k, r, n0=3, seed=None) **
+
+Returns a Ren-L&uuml; vari-linear graph (network).
+
+A graph of `n`nodes is grown by attaching new nodes, each with the number of edges connected follows an exponential probability governed by `k`, and the existing nodes these edges connect to are determined by a variable linear preference controlled by `r`.
+
+------
+
+**Parameters**
+
+**n : int**
+
+Number of nodes.
+
+**k : float**
+
+Set the number of nodes in the output graph.
+
+**r : float**
+
+Set the expected value of global average degree in the output graph.
+
+**n0 : int (3 default)**
+
+Set the Control parameters for variable linear preferential attachment.
+
+**seed : integer, random_state, or None (default)**
+
+Indicator of random number generation state. See [Randomness](https://networkx.org/documentation/stable/reference/randomness.html#randomness).
+
+------
+
+**Returns**
+
+**G : Graph**
+
+------
+
+**Raises**
+
+**NetworkXError**: If `n<1`, or the `m0` does not satisfy `>= 1 and < n`, or the `initial_graph` number of nodes does not satisfy `>= 1 and < n`, or the `k` not satisfy `> 2`.
+
+
+
+## Experiment Code
 
 Fig-NS.py : Comparison of the similarity between RL model results and the real network;
 
