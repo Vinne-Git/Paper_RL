@@ -10,7 +10,7 @@ The code necessary to reproduce the main figures and statistical analyses in the
 
 ## Core Code: ren_l&uuml;_graph.py
 
-##### **ren_l&uuml;_graph(n, k, r, n0=3, seed=None) **
+#### ren_l&uuml;_graph(n, k, r, n0, seed) 
 
 Return a Ren-L&uuml; vari-linear graph (network). A graph of `n`nodes is grown by attaching new nodes, each with the number of edges connected follows an exponential probability governed by `k`, and the existing nodes these edges connect to are determined by a variable linear preference controlled by `r`.
 
@@ -24,7 +24,7 @@ Return a Ren-L&uuml; vari-linear graph (network). A graph of `n`nodes is grown b
 
 **n0 : int (3 default)** Set the Control parameters for variable linear preferential attachment.
 
-**seed : integer, random_state, or None (default)** Indicator of random number generation state. See [Randomness](https://networkx.org/documentation/stable/reference/randomness.html#randomness).
+**seed : integer, random_state (none default)** Indicator of random number generation state. See [Randomness](https://networkx.org/documentation/stable/reference/randomness.html#randomness).
 
 ##### **Returns**
 
