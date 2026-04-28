@@ -10,7 +10,7 @@ The code necessary to reproduce the main figures and statistical analyses in the
 
 ## Core Code: ren_l&uuml;_graph.py
 
-##### ren_l&uuml;_graph(n, k, r, n0=3, seed=None) 
+##### **ren_l&uuml;_graph(n, k, r, n0=3, seed=None) **
 
 Return a Ren-L&uuml; vari-linear graph (network). A graph of `n`nodes is grown by attaching new nodes, each with the number of edges connected follows an exponential probability governed by `k`, and the existing nodes these edges connect to are determined by a variable linear preference controlled by `r`.
 
