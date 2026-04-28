@@ -6,47 +6,37 @@ The code necessary to reproduce the main figures and statistical analyses in the
 
 
 
+------
+
 ## Core Code: ren_l&uuml;_graph.py
 
-**ren_l&uuml;_graph(n, k, r, n0=3, seed=None) **
+##### ren_l&uuml;_graph(n, k, r, n0=3, seed=None) 
 
 Return a Ren-L&uuml; vari-linear graph (network). A graph of `n`nodes is grown by attaching new nodes, each with the number of edges connected follows an exponential probability governed by `k`, and the existing nodes these edges connect to are determined by a variable linear preference controlled by `r`.
 
-------
+##### **Parameters**
 
-**Parameters**
+**n : int** Set the number of nodes in the output graph.
 
-**n : int**
+**k : float** Set the number of nodes in the output graph.
 
-Number of nodes.
+**r : float** Set the expected value of global average degree in the output graph.
 
-**k : float**
+**n0 : int (3 default)** Set the Control parameters for variable linear preferential attachment.
 
-Set the number of nodes in the output graph.
+**seed : integer, random_state, or None (default)** Indicator of random number generation state. See [Randomness](https://networkx.org/documentation/stable/reference/randomness.html#randomness).
 
-**r : float**
-
-Set the expected value of global average degree in the output graph.
-
-**n0 : int (3 default)**
-
-Set the Control parameters for variable linear preferential attachment.
-
-**seed : integer, random_state, or None (default)**
-
-Indicator of random number generation state. See [Randomness](https://networkx.org/documentation/stable/reference/randomness.html#randomness).
-
-------
-
-**Returns**
+##### **Returns**
 
 **G : Graph**
 
-------
-
-**Raises**
+##### **Raises**
 
 **NetworkXError**: If `n<1`, or the `m0` does not satisfy `>= 1 and < n`, or the `initial_graph` number of nodes does not satisfy `>= 1 and < n`, or the `k` not satisfy `> 2`.
+
+
+
+------
 
 
 
