@@ -1,7 +1,7 @@
 # -*- coding: UTF-8 -*-
 '''
 @Project ：Paper_RL
-@File    ：ren_lü_graph.py
+@File    ：ren_lv_graph.py
 @IDE     ：PyCharm 
 @Author  ：Jinhu Ren
 @Date    ：2025/4/28 14:27 
@@ -12,7 +12,7 @@ import numpy as np
 import networkx as nx
 
 
-def ren_lü_graph(n, k, r, n0=3, seed=None):
+def ren_lv_graph(n, k, r, n0=3, seed=None):
     """
     Returns a Ren-Lü vari-linear graph (network).
 
@@ -131,7 +131,7 @@ if __name__ == '__main__':
 
     # Test
     # 测试
-    G = ren_lü_graph(n=2000, k=6, r=0.8, seed=None)
+    G = ren_lv_graph(n=2000, k=6, r=0.8, seed=None)
 
     print("\n" + "=" * 65)
     print("     Ren–Lü (RL) Vari-Linear Network Generation Completed !")
